@@ -1,0 +1,46 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing:border-box;
+}
+
+/*style the container*/
+.container{
+    background-color: blue;
+    height: 250px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around; 
+    align-items:baseline; 
+    align-content: center;
+}
+
+/*style divs inside the container*/
+.container > div{
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    margin: 1px;
+    border: 3px yellow solid;
+    flex : 1 1 150px;
+}
+
+
+
+#apple {
+    flex-grow: 4;
+}
+
+
+#facebook{
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+
+//flex : 1 1 150px means the (flex : flex_grow, //flex_shrink, flex_basis)
+// flex_grow is the rate by which the size of width will //increase when we adjust the window .
+// flex_shrink means the rate by which the width of box //will shrink when we adjust the window. If it is zero it //means it will not shrink at all.
+//flex-basis means the min width of window it will display if we reduce beyonf that limit we will not see everything to be displayed. 
